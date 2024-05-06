@@ -28,7 +28,7 @@
             class="navbar-brand ms-0 me-auto"
             :href="homeUrl"
         >
-            azura<strong>cast</strong>
+            SimpleStreaming<strong>Solutions</strong>
             <small v-if="instanceName">{{ instanceName }}</small>
         </a>
 
@@ -159,20 +159,13 @@
     >
         {{ $gettext('Powered by') }}
         <a
-            href="https://www.azuracast.com/"
+            href="https://www.simplestreaming.co.za"
             target="_blank"
-        >AzuraCast</a>
+        >SimpleStreamingSolutions</a>
         &bull;
         <span v-html="version" />
         &bull;
         <span v-html="platform" /><br>
-        {{ $gettext('Like our software?') }}
-        <a
-            href="https://donate.azuracast.com/"
-            target="_blank"
-        >
-            {{ $gettext('Donate to support AzuraCast!') }}
-        </a>
     </footer>
 </template>
 

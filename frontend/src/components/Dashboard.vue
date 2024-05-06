@@ -27,55 +27,6 @@
                     <span>{{ $gettext('Administration') }}</span>
                 </a>
             </user-info-panel>
-
-            <template v-if="!notificationsLoading && notifications.length > 0">
-                <div
-                    v-for="notification in notifications"
-                    :key="notification.title"
-                    class="card-body d-flex align-items-center alert flex-md-row flex-column"
-                    :class="'alert-'+notification.type"
-                    role="alert"
-                    aria-live="polite"
-                >
-                    <div
-                        v-if="'info' === notification.type"
-                        class="flex-shrink-0 me-3"
-                    >
-                        <icon
-                            :icon="IconInfo"
-                            class="lg"
-                        />
-                    </div>
-                    <div
-                        v-else
-                        class="flex-shrink-0 me-3"
-                    >
-                        <icon
-                            :icon="IconWarning"
-                            class="lg"
-                        />
-                    </div>
-                    <div class="flex-fill">
-                        <h4>{{ notification.title }}</h4>
-                        <p class="card-text">
-                            {{ notification.body }}
-                        </p>
-                    </div>
-                    <div
-                        v-if="notification.actionLabel && notification.actionUrl"
-                        class="flex-shrink-0 ms-md-3 mt-3 mt-md-0"
-                    >
-                        <a
-                            class="btn btn-sm"
-                            :class="'btn-'+notification.type"
-                            :href="notification.actionUrl"
-                            target="_blank"
-                        >
-                            {{ notification.actionLabel }}
-                        </a>
-                    </div>
-                </div>
-            </template>
         </section>
 
         <card-page
